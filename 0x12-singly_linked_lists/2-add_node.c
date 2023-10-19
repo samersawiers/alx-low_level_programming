@@ -4,14 +4,14 @@
 /**
  * add_node - Adds a new node at the beginning of a linked list list_t list.
  * @str: The string to be added to the list_t list. 
- *@head: A pointer to the head of the list_t list.      
+ * @head: A pointer to the head of the list_t list.      
  * 
  * Return: If function fails - NULL.
- * Otherwise - the address of the new element.
+ *         Otherwise - the address of the new element.
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	char *dup;
+	char *dupl;
 	int len;
 	list_t *new;
 
@@ -19,8 +19,8 @@ list_t *add_node(list_t **head, const char *str)
 	if (new == NULL)
 		return (NULL);
 
-	dup = strdup(str);
-	if (dup == NULL)
+	dupl = strdup(str);
+	if (dupl == NULL)
 	{
 		free(new);
 		return (NULL);
@@ -29,7 +29,7 @@ list_t *add_node(list_t **head, const char *str)
 	for (len = 0; str[len];)
 		len++;
 
-	new->str = dup;
+	new->str = dupl;
 	new->len = len;
 	new->next = *head;
 
