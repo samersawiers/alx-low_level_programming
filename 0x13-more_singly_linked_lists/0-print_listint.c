@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * struct listint_s - singly linked list
+ * print_listint - Prints all the elements of a listint_t list.
  * @h: points to the next node
  *
  * Return: The number of nodes in the list_t list.
