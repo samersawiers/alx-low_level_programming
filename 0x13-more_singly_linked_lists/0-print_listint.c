@@ -18,7 +18,7 @@
  {
      n++;
      printf("%d\n", h->n)
-     h = h->n;
+     h = h->next;
  }
  return (n);
  }
